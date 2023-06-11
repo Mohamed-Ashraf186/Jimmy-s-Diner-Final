@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Jimmy's Diner</title>
+  </head>
+  <body>
+    <header>
+      <h1>Jimmy's Diner</h1>
+      <h2>The best burgers and pizzas in town.</h2>
+    </header>
+
+    <main>
+      <!-- menu -->
+      <section class="menu"></section>
+
+      <!-- Pre Checkout -->
+      <section class="pre-checkout hidden">
+        <h3>Your order</h3>
+        <div class="all-items"></div>
+        <div class="total-price-insert"></div>
+        <div class="order-btn-container"></div>
+      </section>
+    </main>
+
+    <section class="modal hidden">
+      <h2>Enter card details</h2>
+      <form class="flex modal-container">
+        <input
+          type="text"
+          name="name"
+          class="input"
+          id="name"
+          placeholder="Enter your name"
+          required
+        />
+        <input
+          id="ccn"
+          class="input"
+          type="tel"
+          pattern="[0-9\s]{13,19}"
+          maxlength="19"
+          placeholder="Enter card number"
+          required
+        />
+
+        <input
+          id="cvv"
+          type="tel"
+          class="input"
+          pattern="[0-9\s]{3}"
+          maxlength="3"
+          placeholder="Enter CVV"
+          required
+        />
+
+        <input type="submit" value="Pay" id="payment" class="payment input" />
+      </form>
+    </section>
+
+    <section class="order-confirm"></section>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
